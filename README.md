@@ -46,7 +46,7 @@ The models are compiled and trained using standard deep learning components opti
 
 The models were evaluated based on their final validation accuracies:
 
-| Architecture Configuration | Data Augmentation | Validation Accuracy |
+| Architecture Configuration | Data Augmentation | Evaluation Accuracy |
 | :--- | :--- | :--- |
 | **3-Layer CNN** | No | **99.786%** |
 | **3-Layer CNN** | Yes | **95.5185%** |
@@ -66,7 +66,7 @@ While a casual look at the surface numbers might suggest that the unaugmented 3-
 
 
 ### 2. Regularization via Data Augmentation
-* **The Drop in Accuracy:** Introducing random transformations purposefully made the training phase harder. This dropped the raw validation accuracy down to **95.5185%**.
+* **The Drop in Accuracy:** Introducing random transformations purposefully made the training phase harder. This dropped the raw evaluation accuracy down to **95.5185%**.
 * **Why this is a Win:** This drop is actually highly beneficial. Augmentation acts as a regularizer, preventing the network from relying on static pixel coordinates or background features. It forces the model to learn invariant geometric structures (like the actual shape of ears, eyes, and snouts), making it vastly more robust.
 
   <img width="1317" height="459" alt="image" src="https://github.com/user-attachments/assets/23ec26dc-6021-4db6-a62f-83f56f01e782" />
